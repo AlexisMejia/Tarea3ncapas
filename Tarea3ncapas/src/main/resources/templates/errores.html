@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Errores de formulario</title>
+</head>
+<body>
+
+	<h1>Lista de errores</h1>
+	
+	<ul th:each="msg : ${msg}">
+		<li th:text="${msg}"/>
+	</ul>
+	<a href="/ingresar"><input type="button" value="Regresar"/></a>
+
+
+</body>
+</html>

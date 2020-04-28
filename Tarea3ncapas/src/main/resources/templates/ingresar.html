@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" th:href="@{CSS/styles.css}" />
+<title>Ingreso de nuevo alumno</title>
+</head>
+<body>
+	<h1>Ingreso de nuevo alumno</h1>
+	<form action="#" th:action="@{/ingresar}" th:object="${alumno}"
+		method="post">
+		<div class="container">
+			<div class="name-group">
+				<label>Nombres:</label> <input type="text" th:field="*{names}" />
+			</div>
+			<div class="lastname-group">
+				<label>Apellidos:</label> <input type="text" th:field="*{lastnames}" />
+			</div>
+			<div class="date-group">
+				<label for="date">Fecha de nacimiento:</label> <input type="date"
+					th:field="*{birthday}" />
+			</div>
+			<div class="place-group">
+				<label>Lugar de nacimiento:</label> <input type="text"
+					th:field="*{place}" />
+			</div>
+			<div class="school-group">
+				<label>Instituto o Colegio de procedencia</label> <input type="text"
+					th:field="*{school}" />
+			</div>
+			<div class="phone-group">
+				<label>Teléfono fijo: </label> <input type="number"
+					th:field="*{phoneNumber}">
+			</div>
+			<div class="mobilePhone-group">
+				<label>Teléfono móvil: </label> <input type="number"
+					th:field="*{mobilePhone}" />
+			</div>
+			<div class="send-button">
+				<input type="submit" value="Guardar alumno" /> <input type="reset"
+					value="Borrar todos los campos" />
+			</div>
+		</div>
+	</form>
+</body>
+</html>
